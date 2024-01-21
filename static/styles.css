@@ -1,0 +1,38 @@
+.jtext{
+    color:rgb(59, 166, 227);
+}
+
+.jheading {
+    color:rgb(50, 70, 70);
+    text-decoration: underline;
+    padding-bottom: 15px;
+}
+
+.jform {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.jsmall_heading {
+    font-size: x-large;
+}
+
+a {
+    color: red;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(79, 132, 151)
+}
+
+.page {
+    padding: 20px 30px;
+    margin: 20px;
+    border: 7px rgb(79, 132, 151);
+    border-style: double;
+    border-top: 0px;
+    margin-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+}

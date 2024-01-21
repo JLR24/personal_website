@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} About {% endblock%}
+
+{% block content %}
+    <h1 class="jheading">About</h1>
+
+    <p class="jtext">Personal info/contact, equipment, music.</p>
+
+    <!-- Form submission prompts email to be sent -->
+    <form method="POST" action="{{url_for('handle_contact')}}" class="jform">
+        <h2 class="jheading jsmall_heading">Want to get in touch?</h2>
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="email" class="form-control" name="email" placeholder="Enter your email address..." required>
+            <small class="text-muted">This is only required so that I can reply to your query.</small>
+        </div>
+        <div class="form-group">
+            <label for="query">Query: </label>
+            <textarea name="query" class="form-control" rows="3" placeholder="Enter your query..." required></textarea>
+        </div>
+        <div style="text-align: right;">
+            <input type="submit" value="Send Query" class="btn btn-outline-secondary">
+        </div>
+    </form>
+    
+{% endblock %}
