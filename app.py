@@ -63,5 +63,16 @@ def send_query(name, email, query):
         flash("Unfortunately, we were unable to send your message at the minute. Please try again later.")
 
 
+@app.errorhandler(404)
+def page_not_found(error):
+    flash("That page does not seem to exist! Redirecting to the home page...")
+    return redirect(url_for("home"))
+
+@app.errorhandler(Exception)
+def handle_error(error):
+    flash(f"Encountered an unknown error: {error}. Redirecting to the home page...")
+    return redirect(url_for("home"))
+
+
 if __name__ == '__main__':
     app.run(debug=True) 
