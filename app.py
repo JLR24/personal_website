@@ -40,11 +40,11 @@ def about():
 @app.route("/handle_contact", methods=["POST"])
 def handle_contact():
     '''Handles the form submission when the user submits a query from the /about page.'''
-    send_query(request.form.get("name"), request.form.get("email"), request.form.get("query"))
+    send_query(request.form.get("email"), request.form.get("query"))
     return redirect(url_for("about"))
 
 
-def send_query(name, email, query):
+def send_query(email, query):
     '''This function sends the user's query as an email to my email address.'''
     try:
         # Define email details
@@ -54,8 +54,8 @@ def send_query(name, email, query):
             recipients = ["jack@ricketts.co.uk"]
         )
         # Only uses the body if the HTML file is unavailable
-        msg.body = f"{name} ({email}): {query} [Error loading HTML file]"
-        msg.html = render_template("send_query.html", name=name, email=email, query=query)
+        msg.body = f"{email}: {query} \n[Error loading HTML file]"
+        msg.html = render_template("send_query.html", email=email, query=query)
         mail.send(msg)
         flash("Your query has been received.")
     except:
