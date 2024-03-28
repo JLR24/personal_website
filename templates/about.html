@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %} About {% endblock%}
+{% block title %} About {% endblock %}
 
 {% block content %}
     <h1 class="jheading">About</h1>
+
+    <p class="jtext">
+        I am a first-year Computer Science student at the University of Warwick, originally from near Cambridge. <br>
+        While at home, I swim competetively for my local town. I am also a keen musician.
+    </p>
 
     <!-- Form submission prompts email to be sent -->
     <form method="POST" action="{{url_for('handle_contact')}}" class="jform">
