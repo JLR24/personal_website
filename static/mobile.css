@@ -1,37 +1,31 @@
 .widget {
-    border: 10px solid black;
-    border-radius: 15px;
-    margin: 5%;
-    padding: 20px;
     text-align: center;
-    background-color:rgb(235, 235, 250)
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid black;
 }
 
 div.widget h2{
+    text-align: left;
     text-decoration: underline;
     font-style: italic;
     margin-bottom: 0px;
+}
+
+.infoBox {
+    text-align: left;
 }
 
 div.widget p{
     color: rgb(75, 75, 0);
 }
 
-div.widget span {
+.info-span {
     font-size: small;
+    width: 100%;
+    display: inline-block;
 }
 
-div.widget .date {
-    float: left;
-}
-
-div.widget .state {
-    float: right;
-}
-
-.infoBox {
-    padding: 5px 15%;
-}
 
 .widgetHR {
     border-top: 1px solid black;
@@ -39,12 +33,6 @@ div.widget .state {
 
 .widgetAnswer {
     color: rgb(59, 166, 227);
-    font-style: italic;
-}
-
-.widgetTags {
-    color: slategray;
-    font-size: x-small;
     font-style: italic;
 }
 
@@ -61,7 +49,6 @@ div.widget .state {
 }
 
 .widget-img {
-    border-radius: 5px; 
-    max-width: 45%; 
-    height: auto;
+    border-radius: 5px;
+    max-width: 90%;
 }
